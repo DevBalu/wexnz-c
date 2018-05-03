@@ -22,7 +22,7 @@ Push API - https://wex.nz/pushAPI/docs
 
 ## Install
     
-    composer require madmis/wexnz-api
+    composer require azkdev/wexnz-c
 
 
 ## Usage
