@@ -27,6 +27,31 @@ Push API - https://wex.nz/pushAPI/docs
 
 ## Usage
 
+Basic usage:
+```
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use azkdev\WexnzApi\WexnzApi;
+
+$api = new WexnzApi(
+	'https://wex.nz/tapi', // maybe other wex.
+	'*******************', // public key.
+	'*******************'  // secret key.
+);
+
+
+print_r($api->trade()->userInfo()); // prints all user wallet info.
+```
+
+For using createCoupon or redeemCoupon methods, you need 'trade' privilege for your api key.
+[More info about 'trade' privilege you can find here.](https://wex.nz/tapi/docs)
+```
+$api->trade()->createCoupon('USD', 200, 'userName'); // Creating coupon with 'currency', 'amount' and 'user name'. User name can be empty string ''.
+
+$api->trade()->createCoupon('**********'); // Redeem coupon. Argument is coupon code. Returns full info about transaction.
+```
 
 ### Mapping
 
