@@ -50,7 +50,7 @@ For using createCoupon or redeemCoupon methods, you need 'trade' privilege for y
 ```
 $api->trade()->createCoupon('USD', 200, 'userName'); // Creating coupon with 'currency', 'amount' and 'user name'. User name can be empty string ''.
 
-$api->trade()->createCoupon('**********'); // Redeem coupon. Argument is coupon code. Returns full info about transaction.
+$api->trade()->redeemCoupon('**********'); // Redeem coupon. Argument is coupon code. Returns full info about transaction.
 ```
 
 ### Mapping
