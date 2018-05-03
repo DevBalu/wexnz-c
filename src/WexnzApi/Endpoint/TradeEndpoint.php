@@ -9,6 +9,8 @@ use madmis\WexnzApi\Model\NewOrder;
 use madmis\WexnzApi\Model\Order;
 use madmis\WexnzApi\Model\TradeHistory;
 use madmis\WexnzApi\Model\UserInfo;
+use madmis\WexnzApi\Model\Coupon;
+use madmis\WexnzApi\Model\GeneratedCoupon;
 use madmis\ExchangeApi\Client\ClientInterface;
 use madmis\ExchangeApi\Endpoint\AbstractEndpoint;
 use madmis\ExchangeApi\Endpoint\EndpointInterface;
@@ -200,6 +202,60 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
 
         if ($mapping) {
             $response = $this->deserializeItems($response['return'], TradeHistory::class);
+        }
+
+        return $response;
+    }
+
+    /**
+     * @param  string $coupon
+     * @param  bool $mapping
+     * @return object|Coupon
+     * @throws ClientErrorException
+     */
+    public function redeemCoupon(string $coupon, bool $mapping = false)
+    {
+        $options = [
+            'form_params' => [
+                'nonce' => $this->getNonce(),
+                'method' => 'RedeemCoupon',
+                'coupon' => $coupon,
+            ],
+        ];
+
+        $response = $this->sendRequest(Api::POST, $this->getApiUrn(), $options);
+
+        if ($mapping) {
+            $response = $this->deserializeItem($response['return'], Coupon::class);
+        }
+
+        return $response;
+    }
+
+    /**
+     * @param  string $currency
+     * @param number $amount
+     * @param string $reciever
+     * @param  bool $mapping
+     * @return object|GeneratedCoupon
+     * @throws ClientErrorException
+     */
+    public function createCoupon(string $currency, number $amount, string $reciever = '', bool $mapping = false)
+    {
+        $options = [
+            'form_params' => [
+                'nonce' => $this->getNonce(),
+                'method' => 'CreateCoupon',
+                'currency' => $currency,
+                'amount' => $amount,
+                'reciever' => $reciever,
+            ],
+        ];
+
+        $response = $this->sendRequest(Api::POST, $this->getApiUrn(), $options);
+
+        if ($mapping) {
+            $response = $this->deserializeItem($response['return'], GeneratedCoupon::class);
         }
 
         return $response;

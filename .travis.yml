@@ -27,7 +27,7 @@ matrix:
 notifications:
     email:
         recipients:
-            - madmis@inbox.ru
+            - azkdev@outlook.com
         on_success: never
         on_failure: always
 
