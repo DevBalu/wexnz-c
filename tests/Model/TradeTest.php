@@ -2,7 +2,7 @@
 
 namespace Test\Model;
 
-use madmis\WexnzApi\Model\Trade;
+use azkdev\WexnzApi\Model\Trade;
 use PHPUnit\Framework\TestCase;
 
 /**

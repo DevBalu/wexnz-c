@@ -1,10 +1,10 @@
 <?php
 
-namespace madmis\WexnzApi;
+namespace azkdev\WexnzApi;
 
 /**
  * Class Api
- * @package madmis\WexnzApi
+ * @package azkdev\WexnzApi
  */
 final class Api
 {

@@ -2,8 +2,8 @@
 
 namespace Test\Model;
 
-use madmis\WexnzApi\Model\Info;
-use madmis\WexnzApi\Model\PairInfo;
+use azkdev\WexnzApi\Model\Info;
+use azkdev\WexnzApi\Model\PairInfo;
 use PHPUnit\Framework\TestCase;
 
 /**

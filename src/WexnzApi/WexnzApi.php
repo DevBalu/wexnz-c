@@ -1,10 +1,10 @@
 <?php
 
-namespace madmis\WexnzApi;
+namespace azkdev\WexnzApi;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use madmis\WexnzApi\Endpoint\PublicEndpoint;
-use madmis\WexnzApi\Endpoint\TradeEndpoint;
+use azkdev\WexnzApi\Endpoint\PublicEndpoint;
+use azkdev\WexnzApi\Endpoint\TradeEndpoint;
 use madmis\ExchangeApi\Client\ClientInterface;
 use madmis\ExchangeApi\Client\GuzzleClient;
 use madmis\ExchangeApi\Endpoint\EndpointFactory;
@@ -12,7 +12,7 @@ use madmis\ExchangeApi\Endpoint\EndpointInterface;
 
 /**
  * Class Wexnz
- * @package madmis\WexnzApi
+ * @package azkdev\WexnzApi
  */
 class WexnzApi
 {

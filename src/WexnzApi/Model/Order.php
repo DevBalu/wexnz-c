@@ -1,10 +1,10 @@
 <?php
 
-namespace madmis\WexnzApi\Model;
+namespace azkdev\WexnzApi\Model;
 
 /**
  * Class Order
- * @package madmis\WexnzApi\Model
+ * @package azkdev\WexnzApi\Model
  */
 class Order
 {

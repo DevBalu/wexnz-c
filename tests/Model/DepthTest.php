@@ -2,7 +2,7 @@
 
 namespace Test\Model;
 
-use madmis\WexnzApi\Model\Depth;
+use azkdev\WexnzApi\Model\Depth;
 use PHPUnit\Framework\TestCase;
 
 /**

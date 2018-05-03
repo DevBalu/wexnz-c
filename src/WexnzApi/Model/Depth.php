@@ -1,11 +1,11 @@
 <?php
 
 
-namespace madmis\WexnzApi\Model;
+namespace azkdev\WexnzApi\Model;
 
 /**
  * Class Depth
- * @package madmis\WexnzApi\Model
+ * @package azkdev\WexnzApi\Model
  */
 class Depth
 {

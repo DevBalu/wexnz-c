@@ -3,9 +3,9 @@
 namespace Test;
 
 use GuzzleHttp\Client;
-use madmis\WexnzApi\WexnzApi;
-use madmis\WexnzApi\Endpoint\PublicEndpoint;
-use madmis\WexnzApi\Endpoint\TradeEndpoint;
+use azkdev\WexnzApi\WexnzApi;
+use azkdev\WexnzApi\Endpoint\PublicEndpoint;
+use azkdev\WexnzApi\Endpoint\TradeEndpoint;
 use madmis\ExchangeApi\Client\ClientInterface;
 use madmis\ExchangeApi\Client\GuzzleClient;
 use PHPUnit\Framework\TestCase;

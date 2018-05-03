@@ -1,16 +1,16 @@
 <?php
 
-namespace madmis\WexnzApi\Endpoint;
+namespace azkdev\WexnzApi\Endpoint;
 
-use madmis\WexnzApi\Api;
-use madmis\WexnzApi\Exception\ClientErrorException;
-use madmis\WexnzApi\Model\CancelOrder;
-use madmis\WexnzApi\Model\NewOrder;
-use madmis\WexnzApi\Model\Order;
-use madmis\WexnzApi\Model\TradeHistory;
-use madmis\WexnzApi\Model\UserInfo;
-use madmis\WexnzApi\Model\Coupon;
-use madmis\WexnzApi\Model\GeneratedCoupon;
+use azkdev\WexnzApi\Api;
+use azkdev\WexnzApi\Exception\ClientErrorException;
+use azkdev\WexnzApi\Model\CancelOrder;
+use azkdev\WexnzApi\Model\NewOrder;
+use azkdev\WexnzApi\Model\Order;
+use azkdev\WexnzApi\Model\TradeHistory;
+use azkdev\WexnzApi\Model\UserInfo;
+use azkdev\WexnzApi\Model\Coupon;
+use azkdev\WexnzApi\Model\GeneratedCoupon;
 use madmis\ExchangeApi\Client\ClientInterface;
 use madmis\ExchangeApi\Endpoint\AbstractEndpoint;
 use madmis\ExchangeApi\Endpoint\EndpointInterface;
@@ -20,7 +20,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Class TradeEndpoint
- * @package madmis\WexnzApi\Endpoint
+ * @package azkdev\WexnzApi\Endpoint
  */
 class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
 {

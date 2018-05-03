@@ -1,13 +1,13 @@
 <?php
 
-namespace madmis\WexnzApi\Endpoint;
+namespace azkdev\WexnzApi\Endpoint;
 
-use madmis\WexnzApi\Api;
-use madmis\WexnzApi\Model\Depth;
-use madmis\WexnzApi\Model\Info;
-use madmis\WexnzApi\Model\PairInfo;
-use madmis\WexnzApi\Model\Ticker;
-use madmis\WexnzApi\Model\Trade;
+use azkdev\WexnzApi\Api;
+use azkdev\WexnzApi\Model\Depth;
+use azkdev\WexnzApi\Model\Info;
+use azkdev\WexnzApi\Model\PairInfo;
+use azkdev\WexnzApi\Model\Ticker;
+use azkdev\WexnzApi\Model\Trade;
 use madmis\ExchangeApi\Client\ClientInterface;
 use madmis\ExchangeApi\Endpoint\AbstractEndpoint;
 use madmis\ExchangeApi\Endpoint\EndpointInterface;
@@ -15,7 +15,7 @@ use madmis\ExchangeApi\Exception\ClientException;
 
 /**
  * Class PublicEndpoint
- * @package madmis\WexnzApi\Endpoint
+ * @package azkdev\WexnzApi\Endpoint
  */
 class PublicEndpoint extends AbstractEndpoint implements EndpointInterface
 {

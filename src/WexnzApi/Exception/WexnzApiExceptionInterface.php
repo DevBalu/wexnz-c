@@ -1,10 +1,10 @@
 <?php
 
-namespace madmis\WexnzApi\Exception;
+namespace azkdev\WexnzApi\Exception;
 
 /**
  * Interface WexnzApiExceptionInterface
- * @package madmis\WexnzApi\Exception
+ * @package azkdev\WexnzApi\Exception
  */
 interface WexnzApiExceptionInterface
 {
