@@ -220,8 +220,8 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
     }
 
     /**
-     * @param  string $coupon
-     * @param  bool $mapping
+     * @param  string  $coupon
+     * @param  bool  $mapping
      * @return object|Coupon
      * @throws ClientErrorException
      */
