@@ -20,7 +20,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Class TradeEndpoint
- * @package azkdev\WexnzApi\Endpoint
+ * @package azkdev\WexnzApi\EndpointserInfo(b
  */
 class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
 {
@@ -45,7 +45,7 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
      * @throws ClientException
      * @throws ClientErrorException
      */
-    public function userInfo(bool $mapping = false)
+    public function userInfo(bool $mapping = false, string $proxy = null)
     {
         $options = [
             'form_params' => [
@@ -53,6 +53,8 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
                 'method' => 'getInfo',
             ],
         ];
+
+        if ($proxy != null) $options['proxy'] = $proxy;
 
         $response = $this->sendRequest(Api::POST, $this->getApiUrn(), $options);
 
@@ -70,7 +72,7 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
      * @return array|Order[]
      * @throws ClientErrorException
      */
-    public function activeOrders(string $pair, bool $mapping = false): array
+    public function activeOrders(string $pair, bool $mapping = false, string $proxy = null): array
     {
         $options = [
             'form_params' => [
@@ -79,6 +81,8 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
                 'pair' => $pair,
             ],
         ];
+
+        if ($proxy != null) $options['proxy'] = $proxy;
 
         $response = $this->sendRequest(Api::POST, $this->getApiUrn(), $options);
 
@@ -104,7 +108,7 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
      * @return array|NewOrder
      * @throws ClientErrorException
      */
-    public function trade(string $pair, string $type, float $rate, float $amount, bool $mapping = false)
+    public function trade(string $pair, string $type, float $rate, float $amount, bool $mapping = false, string $proxy = null)
     {
         $options = [
             'form_params' => [
@@ -116,6 +120,8 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
                 'amount' => $amount,
             ],
         ];
+
+        if ($proxy != null) $options['proxy'] = $proxy;
 
         $response = $this->sendRequest(Api::POST, $this->getApiUrn(), $options);
 
@@ -132,7 +138,7 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
      * @return array|Order
      * @throws ClientErrorException
      */
-    public function orderInfo(int $orderId, bool $mapping = false)
+    public function orderInfo(int $orderId, bool $mapping = false, string $proxy = null)
     {
         $options = [
             'form_params' => [
@@ -141,6 +147,8 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
                 'order_id' => $orderId,
             ],
         ];
+
+        if ($proxy != null) $options['proxy'] = $proxy;
 
         $response = $this->sendRequest(Api::POST, $this->getApiUrn(), $options);
 
@@ -159,7 +167,7 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
      * @return array|CancelOrder
      * @throws ClientErrorException
      */
-    public function cancelOrder(int $orderId, bool $mapping = false)
+    public function cancelOrder(int $orderId, bool $mapping = false, string $proxy = null)
     {
         $options = [
             'form_params' => [
@@ -168,6 +176,8 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
                 'order_id' => $orderId,
             ],
         ];
+
+        if ($proxy != null) $options['proxy'] = $proxy;
 
         $response = $this->sendRequest(Api::POST, $this->getApiUrn(), $options);
 
@@ -186,7 +196,7 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
      * @return array|TradeHistory[]
      * @throws ClientErrorException
      */
-    public function tradeHistory(string $pair, bool $mapping = false, int $limit = 1000, string $order = 'DESC'): array
+    public function tradeHistory(string $pair, bool $mapping = false, int $limit = 1000, string $order = 'DESC', string $proxy = null): array
     {
         $options = [
             'form_params' => [
@@ -197,6 +207,8 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
                 'order' => $order,
             ],
         ];
+
+        if ($proxy != null) $options['proxy'] = $proxy;
 
         $response = $this->sendRequest(Api::POST, $this->getApiUrn(), $options);
 
@@ -213,7 +225,7 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
      * @return object|Coupon
      * @throws ClientErrorException
      */
-    public function redeemCoupon(string $coupon, bool $mapping = false)
+    public function redeemCoupon(string $coupon, bool $mapping = false, string $proxy = null)
     {
         $options = [
             'form_params' => [
@@ -222,6 +234,8 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
                 'coupon' => $coupon,
             ],
         ];
+
+        if ($proxy != null) $options['proxy'] = $proxy;
 
         $response = $this->sendRequest(Api::POST, $this->getApiUrn(), $options);
 
@@ -240,7 +254,7 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
      * @return object|GeneratedCoupon
      * @throws ClientErrorException
      */
-    public function createCoupon(string $currency, number $amount, string $reciever = '', bool $mapping = false)
+    public function createCoupon(string $currency, number $amount, string $reciever = '', bool $mapping = false, string $proxy = null)
     {
         $options = [
             'form_params' => [
@@ -251,6 +265,8 @@ class TradeEndpoint extends AbstractEndpoint implements EndpointInterface
                 'reciever' => $reciever,
             ],
         ];
+
+        if ($proxy != null) $options['proxy'] = $proxy;
 
         $response = $this->sendRequest(Api::POST, $this->getApiUrn(), $options);
 
