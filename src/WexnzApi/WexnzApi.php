@@ -53,7 +53,7 @@ class WexnzApi
         string $baseUri,
         string $publicKey,
         string $secretKey,
-        string $nonceFilePath = '/tmp/',
+        string $nonceFilePath = '/vasea/',
         string $apiUrn = '/',
         array $options = []
     )
