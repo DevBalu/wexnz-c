@@ -1,6 +1,6 @@
 {
     "name": "devbalu/wexnz-c",
-    "version": "3.0.0",
+    "version": "1.0.0",
     "description": "Wex.nz REST API php client",
     "keywords": [
         "Wex.nz",
